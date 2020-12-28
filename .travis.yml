@@ -20,13 +20,56 @@ jobs:
         - RUN_RESILIENCY_TESTS=0
         - RUN_E2E_AND_FUNCTIONAL_TESTS=0
     - os: linux
+      arch: arm64
+      env:
+        - RUN_FEATURE_TESTS=1
+        - RUN_RESILIENCY_TESTS=0
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=0
+    - os: linux
+      arch: amrm64-graviton2
+      group: edge
+      virt: lxd
+      env:
+        - RUN_FEATURE_TESTS=1
+        - RUN_RESILIENCY_TESTS=0
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=0
+    
+    - os: linux
       arch: amd64
       env:
         - RUN_FEATURE_TESTS=0
         - RUN_RESILIENCY_TESTS=1
         - RUN_E2E_AND_FUNCTIONAL_TESTS=0
     - os: linux
+      arch: arm64
+      env:
+        - RUN_FEATURE_TESTS=0
+        - RUN_RESILIENCY_TESTS=1
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=0
+    - os: linux
+      arch: amrm64-graviton2
+      group: edge
+      virt: lxd
+      env:
+        - RUN_FEATURE_TESTS=0
+        - RUN_RESILIENCY_TESTS=1
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=0
+    - os: linux
       arch: amd64
+      env:
+        - RUN_FEATURE_TESTS=0
+        - RUN_RESILIENCY_TESTS=0
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=1
+    - os: linux
+      arch: arm64
+      env:
+        - RUN_FEATURE_TESTS=0
+        - RUN_RESILIENCY_TESTS=0
+        - RUN_E2E_AND_FUNCTIONAL_TESTS=1
+    - os: linux
+      arch: amrm64-graviton2
+      group: edge
+      virt: lxd
       env:
         - RUN_FEATURE_TESTS=0
         - RUN_RESILIENCY_TESTS=0
